@@ -49,7 +49,7 @@ public class userStory2 {
 
             WebElement frame=driver.findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
             driver.switchTo().frame(frame);
-            driver.findElement(By.xpath("/html/body")).sendKeys("Hello");
+            driver.findElement(By.xpath("/html/body")).sendKeys("HI");
             driver.switchTo().parentFrame();
 
 
@@ -57,7 +57,7 @@ public class userStory2 {
             WebElement button = driver.findElement(By.id("blog-submit-button-save"));
             button.click();
              Thread.sleep(2000);
-            driver.close();
+
         }
 
 
