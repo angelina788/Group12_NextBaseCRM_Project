@@ -17,7 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class userStory2 {
 
     WebDriver driver;
-    @BeforeClass
+
+    @BeforeMethod
     public void setupMethod() {
 
         //1.Open Chrome browser.
@@ -28,10 +29,9 @@ public class userStory2 {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         // 2. go to ("http://login.nextbasecrm.com")
         driver.get("http://login.nextbasecrm.com");
-    }
-    @BeforeMethod
+
     // Verify you can loggIn
-    public void logg_in (){
+
         WebElement logIn = driver.findElement(By.name("USER_LOGIN"));
         logIn.sendKeys("helpdesk22@cybertekschool.com");
         WebElement password = driver.findElement(By.name("USER_PASSWORD"));
@@ -56,10 +56,26 @@ public class userStory2 {
              //click button send
             WebElement button = driver.findElement(By.id("blog-submit-button-save"));
             button.click();
-             Thread.sleep(2000);
+             Thread.sleep(4000);
 
+
+        // first find the message
+            WebElement message1 = driver.findElement(By.id("feed-add-post-form-tab-message"));
+            message1.click();
+            Thread.sleep(4000);
+        // find a button CANCEL
+        WebElement cancelmessage = driver.findElement(By.id("blog-submit-button-cancel"));
+        cancelmessage.click();
+        Thread.sleep(4000);
+
+         // kink by clicking
+            WebElement message3 = driver.findElement(By.id("feed-add-post-form-tab-message"));
+            message3.click();
+        WebElement link = driver.findElement(By.xpath("//*[@id=\"bx-b-link-blogPostForm\"]/span/i"));
+        link.click();
+        Thread.sleep((4000));
+        driver.close();
         }
-
 
 
 }
