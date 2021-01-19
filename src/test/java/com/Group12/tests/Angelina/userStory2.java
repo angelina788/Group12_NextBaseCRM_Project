@@ -1,14 +1,11 @@
 package com.Group12.tests.Angelina;
 
 import com.Group12.utility.WebDriverFactory;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class userStory2 {
@@ -79,7 +76,7 @@ public class userStory2 {
 /*
 Acceptance criteria:
 
-Verify users can send message by clicking "MESSAGE" tab
+1. Verify users can send message by clicking "MESSAGE" tab
 2. Verify users can cancel message.
 3. Verify users can attach link by clicking on the link icon.
  */
