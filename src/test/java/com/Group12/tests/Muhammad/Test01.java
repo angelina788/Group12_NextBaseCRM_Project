@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class Test01 {
+    /*
     WebDriver driver;
 
     @BeforeMethod
@@ -71,4 +72,6 @@ public class Test01 {
         driver.close();
     }
 
+
+     */
 }
