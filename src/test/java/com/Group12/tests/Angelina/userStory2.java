@@ -1,10 +1,7 @@
 package com.Group12.tests.Angelina;
 
 import com.Group12.utility.WebDriverFactory;
-import com.github.javafaker.Faker;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
