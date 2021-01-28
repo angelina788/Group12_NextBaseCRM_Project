@@ -74,6 +74,11 @@ public class TestCase_G12_106 {
 
     }
 
+    @AfterMethod
+    public void tearDownMethod(){
+        driver.close();
+    }
+
 
 
 
