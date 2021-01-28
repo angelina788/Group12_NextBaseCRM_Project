@@ -1,5 +1,7 @@
 package com.Group12.tests.Mustafa.UserStory_9;
 
+import com.Group12.tests.Mustafa.Base.TestBase;
+import com.Group12.tests.Mustafa.Utilities.WebOrderUtils;
 import com.Group12.utility.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +11,7 @@ import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestCase_G12_106 {
+public class TestCase_G12_106 extends TestBase {
 
     //Acceptance Criteria:
     //1. Verify users can send events by clicking "EVENT" tab with at least an event name.
@@ -17,39 +19,13 @@ public class TestCase_G12_106 {
     //3. Verify users can check timers
     //4. Verify users can choose all day for the event time
 
-    WebDriver driver;
-
-    @BeforeClass
-    public void setupClass(){
-
-        driver =  WebDriverFactory.getDriver("chrome");
+    @Test
+    public void As_a_user_I_should_be_able_to_send_an_event() throws InterruptedException {
 
         driver.get("https://login.nextbasecrm.com");
 
-    }
+        WebOrderUtils.logInToCRM(driver);
 
-    @BeforeMethod
-    public void log_in() throws InterruptedException {
-
-        Thread.sleep(2000);
-
-        WebElement logIn = driver.findElement(By.name("USER_LOGIN"));
-        logIn.sendKeys("helpdesk22@cybertekschool.com");
-
-        Thread.sleep(2000);
-
-        WebElement password = driver.findElement(By.name("USER_PASSWORD"));
-        password.sendKeys("UserUser");
-
-        Thread.sleep(2000);
-
-        WebElement logIn_button  = driver.findElement(By.xpath("//input[@value='Log In']"));
-        logIn_button.click();
-
-    }
-
-    @Test
-    public void As_a_user_I_should_be_able_to_send_an_event() throws InterruptedException {
 
         //Acceptance Criteria
         //1. Verify users can send events by clicking "EVENT" tab with at least an event name.
